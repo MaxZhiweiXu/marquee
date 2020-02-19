@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .marqueeBox{
+        position: relative;
+        margin:20px auto;  /*//上下20  左右auto*/
+        width:500px;
+        height:100px;
+        border:1px solid green;
+        overflow:hidden;  /*//溢出部分隐藏*/
+    }
+    .wrapper{
+        position: absolute;
+        top:0;
+        left:0;
+        width:900px;
+        height:100px;
+    }
+    .wrapper li{
+        list-style: none;
+        float:left;
+        width:100px;
+        height:100px;
+        line-height:100px;
+        text-align:center;
+        font-size:20px;
+    }
+    .wrapper li:nth-child(3n+1){
+        background:lightblue;
+    }
+    .wrapper li:nth-child(3n+2){
+        background: lightcyan;
+    }
+    .wrapper li:nth-child(3n+3){
+        background: lightpink;
+    }
+
+
+
+
+
+</style>
+<body>
+<!--/*
+很久以前 实现跑马丁用的是marquee
+     1。不好实现无缝衔接
+     2。开始显示内容时候会有一段空白
+     3。性能消耗大
+     4。目前marquee标签基本上被舍弃了
+     。。。
+*/
+
+/++===================================
+/*
+现如今跑马灯都是基于JS动画或者CSS3动画实现的
+
+*/-->
+
+<div class="marqueeBox">
+    <ul class="wrapper">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</div>
+
+<script src="utils.js"></script>
+<script src="跑马灯.js"></script>
+
+</body>
+</html>
+
+
